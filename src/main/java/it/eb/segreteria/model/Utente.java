@@ -10,6 +10,7 @@ public class Utente {
 	private String nome;
 	private String cognome;
 	
+<<<<<<< HEAD
 	public Utente() {
 		
 	}
@@ -19,6 +20,16 @@ public class Utente {
 		this.password=password;
 		this.nome=nome;
 		this.cognome=cognome;
+=======
+	public Utente() {} 
+	
+	public Utente(String email, String password, String nome, String cognome) {
+		this.email=email;
+		this.password=password;
+		this.nome=nome;
+		this.cognome=cognome; 
+		
+>>>>>>> 03edfd6 (first commit)
 	}
 	
 	public String getEmail() {
@@ -46,4 +57,9 @@ public class Utente {
 		this.cognome = cognome;
 	}
 	
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 03edfd6 (first commit)
 }

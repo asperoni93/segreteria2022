@@ -25,10 +25,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.antMatcher("/**")  
+<<<<<<< HEAD
         .authorizeRequests()  
         .antMatchers("/").permitAll()
         .and().authorizeRequests().antMatchers("/").hasAnyAuthority("ADMIN","USER")
         .and().authorizeRequests().antMatchers("/users/**").hasAnyAuthority("ADMIN")
+=======
+        .authorizeRequests().antMatchers("/").permitAll()
+        .and().authorizeRequests().antMatchers("/").hasAnyAuthority("ADMIN","USER")
+        .and().authorizeRequests().antMatchers("/users/**").hasAnyAuthority("ADMIN")
+        .and().authorizeRequests().antMatchers("/test").permitAll()
+>>>>>>> 03edfd6 (first commit)
         .anyRequest().authenticated()
         .and().formLogin(); 
 	}
@@ -40,7 +47,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.jdbcAuthentication()
 			.dataSource(dataSource)
 			.usersByUsernameQuery("SELECT email,password,1 FROM users where email=?")
+<<<<<<< HEAD
 			.authoritiesByUsernameQuery("SELECT email,authority FROM roles where email=?")
+=======
+			.authoritiesByUsernameQuery("SELECT email, authority FROM roles where email=?")
+>>>>>>> 03edfd6 (first commit)
 			.passwordEncoder(encoder());
 
 //        System.out.println(encoder().encode("1234"));
@@ -52,4 +63,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	    return new BCryptPasswordEncoder();
 	}
 	
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 03edfd6 (first commit)
