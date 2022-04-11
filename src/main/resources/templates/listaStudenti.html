@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Segreteria</title>
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+</head>
+<body>
+ <table class="table table-bordered">
+   <thead>
+ 			<tr>
+	     	  <th> Matricola </th>
+	          <th> Codice Fiscale</th> 
+	          <th> Nome</th>
+	          <th> Cognome</th>
+	          <th> Data di nascita</th>
+	          <th> Genere</th>
+	          <th> Telefono_1</th>
+	          <th> Nome_telefono_1</th>
+	          <th> Telefono_2</th>
+	          <th> Nome_telefono_2</th>
+	          <th> Email</th>
+	          <th> Luogo_nascita</th>
+	          <th> Città</th>
+	          <th> Indirizzo</th>
+	          <th> Cap</th>
+	          <th> nazionalità</th>
+	          
+	       
+  			</tr>
+    </thead>
+    <tbody>
+		<tr th:each="s : ${studenti}">
+			<td><span th:text="${s.matricola}"> matricola </span></td>
+			<td><span th:text="${s.codice_fiscale}"> codice_fiscale </span></td>
+			<td><span th:text="${s.nome}"> Nome </span></td>
+			<td><span th:text="${s.cognome}"> Cognome </span></td>
+			<td><span th:text="${s.data_nascita}"> data_nascita </span></td>
+			<td><span th:text="${s.genere}"> genere </span></td>
+			<td><span th:text="${s.telefono1}"> telefono1 </span></td>
+			<td><span th:text="${s.nome_telefono1}"> nome_telefono1 </span></td>
+			<td><span th:text="${s.telefono2}"> telefono2 </span></td>
+			<td><span th:text="${s.nome_telefono2}"> nome_telefono2 </span></td>
+			<td><span th:text="${s.email}"> email </span></td>
+			<td><span th:text="${s.luogo_nascita}"> luogo_nascita </span></td>
+			<td><span th:text="${s.citta}"> citta </span></td>
+			<td><span th:text="${s.indirizzo}"> indirizzo </span></td>
+			<td><span th:text="${s.cap}"> cap </span></td>
+			<td><span th:text="${s.nazionalita}"> nazionalita </span></td>
+		         
+       </tr>
+   </tbody>
+      </table>
+</body>
+</html>

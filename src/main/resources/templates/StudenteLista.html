@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>Segreteria</title>
+		<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		 
+		  <div class="col-12">
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">Studenti</h3>
+					<div class="card-tools">
+						<div class="input-group input-group-sm" style="width: 150px;">
+							<input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-default">
+									<i class="fas fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-body table-responsive p-0">
+ 					<table class="table table-hover text-nowrap">
+						<thead>
+							<tr>
+								<th><i class="fa-regular fa-square-plus"></i></th>
+								<th> Matricola </th>
+			                    <th> Nome</th>
+			                    <th> Cognome</th>
+			                    <th> Data nascita </th>
+			                    <th> Genere </th>
+			                    <th> Telefono 1 </th>
+			                    <th> Nome tel 1 </th>
+			                    <th> Telefono 2 </th>
+			                    <th> Nome tel 2 </th>
+			                    <th> Email </th>
+			                    <th> Luogo nascita </th>
+			                    <th> Città </th>
+			                    <th> Indirizzo </th>
+			                    <th> Cap </th>
+			                    <th> Nazionalità </th>
+			                    <th> CF </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="studente : ${studenti}">
+								 <td></td>
+						         <td><span th:text="${studente.matricola}"> Matricola </span></td>
+						         <td><span th:text="${studente.nome}"> Nome </span></td>
+						         <td><span th:text="${studente.cognome}"> Cognome </span></td>
+						         <td><span th:text="${studente.data_nascita}"> Data nascita </span></td>
+						         <td><span th:text="${studente.genere}"> Genere </span></td>
+						         <td><span th:text="${studente.telefono1}"> Telefono 1 </span></td>
+						         <td><span th:text="${studente.nome_telefono1}"> Nome tel 1 </span></td>
+						         <td><span th:text="${studente.telefono2}"> Telefono 2 </span></td>
+						         <td><span th:text="${studente.nome_telefono2}"> Nome tel 2 </span></td>
+						         <td><span th:text="${studente.email}"> Email </span></td>
+						         <td><span th:text="${studente.luogo_nascita}"> Luogo nascita </span></td>
+						         <td><span th:text="${studente.citta}"> Città </span></td>
+						         <td><span th:text="${studente.indirizzo}"> Indirizzo </span></td>
+						         <td><span th:text="${studente.cap}"> Cap </span></td>
+						         <td><span th:text="${studente.nazionalita}"> Nazionalità </span></td>
+						         <td><span th:text="${studente.codice_fiscale}"> CF </span></td>
+		         			</tr>
+						</tbody>
+					</table>  
+				</div>     
+			</div>
+		  </div>           	               
+	</body>
+</html>
