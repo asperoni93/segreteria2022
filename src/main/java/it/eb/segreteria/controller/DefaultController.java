@@ -44,5 +44,26 @@ public class DefaultController {
 		model.addAttribute("utenti",lista);
 		return "listautenti";
 	}
+
+	@GetMapping("/inserisciStud")
+	public String paginaAddStudente(Model model) {
+		model.addAttribute("studente",new Studente());
+		return "inserisciStudenti";
+	} 
+	
+
+	@GetMapping("/studenteList")
+	public String paginaStudenti(Model model) {
+		model.addAttribute("studenti",studenteDAO.getAllStudente());
+		return "listaStudenti";
+	} 
+	@GetMapping("/studenteList2")
+	public String paginaStudenti2(Model model) {
+		model.addAttribute("studenti",studenteDAO.getAllStudente());
+		return "StudentiLista";
+	} 
+	
+	@PostMapping("/inserimentoStudenti")
+	public String insStudenti(@ModelAttribute Studente studente , Model model) {
 		
 }
