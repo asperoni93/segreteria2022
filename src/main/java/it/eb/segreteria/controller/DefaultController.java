@@ -47,6 +47,7 @@ public class DefaultController {
 		model.addAttribute("studente",new Studente());
 		return "inserisciStudenti";
 	} 
+	
 
 	@GetMapping("/studenteList")
 	public String paginaStudenti(Model model) {
